@@ -32,14 +32,7 @@
         document.getElementById("article").style.display = "none";
         document.getElementById("back").style.display = "none";
     }
-function loading(){
-    if(document.getElementById("img").naturalHeight){
-        document.getElementById("loading").style.display = "none";
-    }
-    else{
-        document.getElementById("loading").style.display = "block";
-    }
-}
+
   
     
    
