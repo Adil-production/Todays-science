@@ -17,9 +17,26 @@
        
         console.log(data)
         document.querySelector("#all #main #card #card-body #title").innerHTML = data.title;
-        document.querySelector("#all #main #card #img").src = data.url;
         document.querySelector("#all #main #card #publish").innerHTML = data.date;
-        document.querySelector("#all #img2").src = data.url;
+        document.getElementById("exp").innerHTML = data.explanation;
+        if(data.media_type == "image"){
+            document.getElementById("img").style.display = "block";
+            document.getElementById("imgg").style.display = "none";
+            document.getElementById("img2").style.display = "block";
+            document.getElementById("imgg2").style.display = "none";
+            
+        }else{
+            document.getElementById("img").style.display = "none";
+            document.getElementById("imgg").style.display = "block";
+            document.getElementById("img2").style.display = "none";
+            document.getElementById("imgg2").style.display = "block";
+        }
+
+
+       document.querySelector("#all #img2").src = data.url;
+       document.querySelector("#all #main #card #img").src = data.url;
+       document.querySelector("#all #imgg2").src = data.url;
+       document.querySelector("#all #main #card #img2").src = data.url;
        document.querySelector("#all #article #exp").innerHTML = data.explanation;
     }
     function exp(){
